@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var typedStrings = [
     'Desenvolvedor Full Stack',
     'Forte interesse em Back-End',
-    'Apaixonado por Dados',
+    'Interessado por Dados',
     'Python · Java · SQL',
   ];
 
