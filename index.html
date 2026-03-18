@@ -13,7 +13,7 @@
   <!-- Anti-flash: aplica tema antes da renderização -->
   <script>
     (function() {
-      var saved = localStorage.getItem('theme');
+      var saved = localStorage.getItem('bd-theme');
       document.documentElement.setAttribute('data-theme', saved || 'dark');
     })();
   </script>
@@ -34,7 +34,7 @@
       </nav>
       <div class="nav-actions">
         <!-- Botão toggle dark/light mode -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Alternar modo escuro" onclick="var t=document.documentElement.getAttribute('data-theme');var n=t==='dark'?'light':'dark';document.documentElement.setAttribute('data-theme',n);localStorage.setItem('theme',n);">
+        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
           <!-- Ícone Sol (aparece no dark mode) -->
           <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07-6.07-.71.71M6.34 17.66l-.71.71m12.73 0-.71-.71M6.34 6.34l-.71-.71M12 5a7 7 0 100 14A7 7 0 0012 5z"/></svg>
           <!-- Ícone Lua (aparece no light mode) -->
@@ -622,6 +622,6 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
   </button>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
