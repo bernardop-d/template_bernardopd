@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
      4. TYPEWRITER
   ---------------------------------------------------------- */
   var typedStrings = [
-    'Desenvolvedor Full Stack',
+    'Desenvolvedor Back-End',
     'Forte interesse em Back-End',
     'Python · Java · SQL',
   ];
