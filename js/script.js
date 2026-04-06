@@ -93,7 +93,6 @@ document.addEventListener('DOMContentLoaded', function () {
   var typedStrings = [
     'Desenvolvedor Full Stack',
     'Forte interesse em Back-End',
-    'Interessado por Dados',
     'Python · Java · SQL',
   ];
 
@@ -160,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function () {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
       var name    = document.getElementById('name').value.trim();
-      var email   = document.getElementById('email').value.trim();
+      var email   = document.getElementById('email_visible').value.trim();
       var message = document.getElementById('message').value.trim();
 
       if (!name || !email || !message) { showFeedback('Preencha todos os campos.', 'error'); return; }
@@ -170,12 +169,27 @@ document.addEventListener('DOMContentLoaded', function () {
       btn.textContent = 'Enviando...';
       btn.disabled = true;
 
-      setTimeout(function () {
-        showFeedback('Mensagem recebida, ' + name + '! Retorno em breve. 🚀', 'success');
-        contactForm.reset();
+      /* Envia de verdade para Formspree */
+      fetch(contactForm.action, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(contactForm)
+      })
+      .then(function (res) {
+        if (res.ok) {
+          showFeedback('Mensagem enviada, ' + name + '! Retorno em breve. 🚀', 'success');
+          contactForm.reset();
+        } else {
+          showFeedback('Erro ao enviar. Tente: contato.bernardopd@gmail.com', 'error');
+        }
+      })
+      .catch(function () {
+        showFeedback('Sem conexão. Tente: contato.bernardopd@gmail.com', 'error');
+      })
+      .finally(function () {
         btn.textContent = 'Enviar mensagem';
         btn.disabled = false;
-      }, 1200);
+      });
     });
   }
 
