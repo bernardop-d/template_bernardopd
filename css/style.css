@@ -791,6 +791,11 @@ button { cursor: pointer; font-family: inherit; }
   background: rgba(13,13,13,0.97);
 }
 
+/* Navbar scrolled no dark mode */
+[data-theme="dark"] .navbar.scrolled {
+  background: rgba(13,13,13,0.92);
+}
+
 /* ============================================================
    THEME TOGGLE BUTTON
    ============================================================ */
