@@ -92,7 +92,6 @@ document.addEventListener('DOMContentLoaded', function () {
   ---------------------------------------------------------- */
   var typedStrings = [
     'Desenvolvedor Back-End',
-    'Forte interesse em Back-End',
     'Python · Java · SQL',
   ];
 
