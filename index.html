@@ -91,7 +91,7 @@
         </a>
       </div>
       <div class="hero-stats reveal">
-        <div class="stat"><span class="stat-number">5</span><span class="stat-label">Projetos</span></div>
+        <div class="stat"><span class="stat-number">7</span><span class="stat-label">Projetos</span></div>
         <div class="stat-divider"></div>
         <div class="stat"><span class="stat-number">1+</span><span class="stat-label">Ano de exp.</span></div>
         <div class="stat-divider"></div>
@@ -122,16 +122,19 @@
         </div>
         <div class="about-text reveal">
           <p class="about-intro">
-            Sou <strong>Bernardo Dutra</strong>, desenvolvedor Back-End. Gosto de código limpo, queries bem escritas e sistemas que funcionam sem surpresas.
+            Gosto de resolver problemas com código. Comecei como Jovem Aprendiz na <strong>Empresa de Navegação Elcano SA</strong>, onde aprendi na prática o que é trabalhar com sistemas reais: banco de dados SQL no dia a dia, scripts de automação que reduziram para 30 minutos uma tarefa que tomava horas na frota de 11 navios, testes de QA em aplicativos críticos e suporte remoto às embarcações.
           </p>
           <p>
-            Na <strong>Empresa de Navegação Elcano SA</strong>, trabalhei como Auxiliar Técnico. Manipulava bancos de dados direto em produção: queries, correção de bugs e conferência de integridade. Automatizei processos de controle de arquivos com scripts Batch. Também fui responsável pelo QA das aplicações internas: testava funcionalidades, documentava falhas e validava as entregas antes de chegarem aos usuários.
+            Depois, surgiu a oportunidade de ajudar minha mãe, que tem uma empresa de aluguel de materiais para festas. Desenvolvi do zero um sistema web pra ela: back-end em Python, banco SQLite, integração com WhatsApp pra confirmar pedidos automaticamente. Resultado: 80% dos processos que ela fazia na mão viraram automáticos, e na alta temporada ela conseguiu atender o dobro de clientes.
           </p>
           <p>
-            Curso <strong>Análise e Desenvolvimento de Sistemas</strong> na Estácio de Sá, conclusão em dez/2026. Fora da faculdade, os projetos são onde o aprendizado de fato acontece: APIs, bancos relacionais, automações e um chatbot de ensino de programação construído do zero.
+            Mais recentemente comecei a explorar agentes de IA. Construí um sistema multi-agente com Google ADK e Gemini 2.5 Flash onde um agente pesquisa na web, outro escreve e executa código, e um agente raiz orquestra tudo. O usuário descreve o problema e o sistema resolve. Também desenvolvi um Job Scraper com FastAPI e Selenium pra automatizar minha própria busca por vagas.
           </p>
           <p>
-            Inglês avançado para leitura e escuta. Documentações técnicas em inglês fazem parte da rotina.
+            Trabalho principalmente com Java, Spring Boot, Python e FastAPI, com projetos rodando em MySQL, SQLite, CI/CD via GitHub Actions e arquitetura em camadas. Prefiro entender o que está acontecendo por baixo antes de abstrair.
+          </p>
+          <p>
+            Estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Estácio de Sá, com conclusão em 2027, e procurando minha primeira oportunidade CLT como desenvolvedor júnior ou estagiário.
           </p>
           <div class="about-highlights">
             <div class="highlight-item"><span class="highlight-icon">📍</span><span>Rio de Janeiro, Tijuca</span></div>
@@ -217,6 +220,7 @@
         <button class="filter-btn" data-filter="backend">Back-End</button>
         <button class="filter-btn" data-filter="fullstack">Full Stack</button>
         <button class="filter-btn" data-filter="automacao">Automação</button>
+        <button class="filter-btn" data-filter="ia">IA</button>
       </div>
 
       <div class="projects-grid">
@@ -338,6 +342,50 @@
           </div>
         </div>
 
+        <!-- PROJETO 6: Blog Tech IA -->
+        <div class="project-card reveal" data-category="automacao">
+          <div class="project-header">
+            <div class="project-icon">📝</div>
+            <div class="project-links-top">
+              <a href="https://github.com/bernardop-d/blog-tech-IA" target="_blank" rel="noopener" aria-label="Ver código">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Blog Tech IA</h3>
+          <p class="project-description">
+            Blog técnico com publicação autônoma via GitHub Actions. Um script Python gera os posts automaticamente e o CI/CD publica sem intervenção manual. Jekyll como gerador estático.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>Jekyll</span><span>GitHub Actions</span><span>CI/CD</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://github.com/bernardop-d/blog-tech-IA" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
+          </div>
+        </div>
+
+        <!-- PROJETO 7: Agente Executor de Código -->
+        <div class="project-card reveal" data-category="ia">
+          <div class="project-header">
+            <div class="project-icon">🧠</div>
+            <div class="project-links-top">
+              <a href="https://github.com/bernardop-d/agent-executor-codigo" target="_blank" rel="noopener" aria-label="Ver código">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3 class="project-name">Agente Executor de Código</h3>
+          <p class="project-description">
+            Sistema multi-agente para resolução autônoma de problemas. Um agente pesquisa na web, outro escreve e executa código, e um agente raiz orquestra tudo. O usuário descreve o problema e o sistema resolve.
+          </p>
+          <div class="project-tech">
+            <span>Python</span><span>Google ADK</span><span>Gemini 2.5 Flash</span><span>Multi-Agente</span>
+          </div>
+          <div class="project-buttons">
+            <a href="https://github.com/bernardop-d/agent-executor-codigo" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
+          </div>
+        </div>
+
         <!-- DUPLIQUE ESTE BLOCO PARA NOVOS PROJETOS
         <div class="project-card reveal" data-category="backend">
           <div class="project-header">
@@ -377,15 +425,10 @@
             </div>
             <span class="timeline-period">📅 Setembro de 2024 — Março de 2026</span>
             <p>
-              <strong>Gestão de Dados & SQL:</strong> Manipulação diária de banco de dados
-              execução de queries, análise de informações e correção de bugs, garantindo
-              consistência dos dados corporativos.<br /><br />
-              <strong>Automação & Integridade:</strong> Desenvolvimento de scripts Batch (.bat)
-              para conferência automatizada de arquivos das embarcações, reduzindo erros manuais
-              e garantindo integridade dos dados técnicos.<br /><br />
-              <strong>QA & Suporte:</strong> Testes de aplicativos internos, validação de
-              funcionalidades, suporte remoto via RDC Manager e controle de manutenção via
-              sistema AMOS.
+              <strong>Automação com Batch:</strong> Criei scripts Batch que processavam entre 300 e 700 arquivos por navio. O processo que tomava 15–20 min por embarcação passou a cobrir a frota inteira de 11 navios em 30 minutos.<br /><br />
+              <strong>Gestão de Dados e SQL:</strong> Executava queries de análise e correção de inconsistências diretamente no banco de dados da frota, cruzando dados entre o banco central e os bancos individuais de cada navio para garantir consistência das informações operacionais.<br /><br />
+              <strong>Garantia de Qualidade (QA):</strong> Testei 3 aplicativos usados pela tripulação e pelo escritório, identificando bugs de duplicidade, travamentos e falhas na ordem de execução. Documentei e reportei os problemas com casos de teste e passos de reprodução.<br /><br />
+              <strong>Suporte Remoto:</strong> Acessava as máquinas via RDC Manager para atualizações técnicas e acompanhamento de ações preditivas nos componentes da frota.
             </p>
           </div>
         </div>
@@ -395,13 +438,14 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <h3>Hércules Festas</h3>
-              <span class="timeline-badge">Desenvolvedor Full-Stack · Freelance</span>
+              <span class="timeline-badge">Desenvolvedor Back-End · Freelance</span>
             </div>
-            <span class="timeline-period">📅 Projeto autoral</span>
+            <span class="timeline-period">📅 Setembro de 2025 — Novembro de 2025</span>
             <p>
-              Concepção e implementação de sistema completo de gestão e controle de eventos.
-              Back-end em Python puro, integrado com interface HTML5/CSS3/JS e banco de dados
-              SQLite com modelagem relacional e queries otimizadas para escalabilidade.
+              Desenvolvi do zero um sistema web para digitalizar a operação de uma empresa de locação de artigos para festas, que operava de forma analógica, com anotações de pedidos feitas manualmente em papel, resultando em erros constantes e falta de controle de estoque.<br /><br />
+              <strong>Stack Tecnológica:</strong> Back-end em Python (servidor HTTP Standard Library); banco de dados relacional com SQLite; integração com a API do WhatsApp para automação de notificações e confirmação de pedidos após o atendimento.<br /><br />
+              <strong>Arquitetura de Dados:</strong> Modelei o banco de dados relacional em SQLite e integrei o sistema ao WhatsApp para envio automático de mensagens após cada atendimento.<br /><br />
+              <strong>Resultado:</strong> A transição do papel para o sistema digital eliminou 80% do trabalho manual e permitiu dobrar o volume de atendimentos na alta temporada através da centralização dos dados e automação de processos.
             </p>
           </div>
         </div>
