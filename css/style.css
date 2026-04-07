@@ -555,6 +555,7 @@ button { cursor: pointer; font-family: inherit; }
 .cert-date   { display: block; font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-muted); margin-top: 2px; }
 .cert-arrow  { color: var(--text-muted); flex-shrink: 0; transition: all var(--transition); }
 .cert-card:hover .cert-arrow { color: var(--text-primary); transform: translate(2px, -2px); }
+.cert-project { display: block; font-size: 0.68rem; color: var(--accent, #6e9ef7); margin-top: 3px; font-style: italic; opacity: 0.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 
 /* ============================================================
    13. CURRÍCULO
