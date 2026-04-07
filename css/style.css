@@ -556,6 +556,7 @@ button { cursor: pointer; font-family: inherit; }
 .cert-arrow  { color: var(--text-muted); flex-shrink: 0; transition: all var(--transition); }
 .cert-card:hover .cert-arrow { color: var(--text-primary); transform: translate(2px, -2px); }
 .cert-project { display: block; font-size: 0.68rem; color: var(--accent, #6e9ef7); margin-top: 3px; font-style: italic; opacity: 0.8; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.avatar-photo  { width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
 
 /* ============================================================
    13. CURRÍCULO
@@ -688,7 +689,7 @@ button { cursor: pointer; font-family: inherit; }
 
   .nav-links {
     position: fixed; top: 0; left: 0; right: 0; height: 100vh;
-    background: rgba(248,248,246,0.98); backdrop-filter: blur(20px);
+    background: rgba(248,248,246,0.98); -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px);
     flex-direction: column; align-items: center; justify-content: center; gap: 28px;
     transform: translateX(100%); transition: transform var(--transition); z-index: 999;
   }
