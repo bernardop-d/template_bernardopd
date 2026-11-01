@@ -3,734 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Portfólio de Bernardo Pereira Dutra, Desenvolvedor Back-End" />
-  <meta property="og:title" content="Bernardo Dutra | Desenvolvedor Back-End" />
-  <meta property="og:description" content="Desenvolvedor Back-End | Python, Java, SQL e com forte interesse em automação de processos." />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Bernardo Pereira Dutra, Desenvolvedor Full Stack no Rio de Janeiro. Java, Spring Boot e Angular, modernização de sistemas legados, SQL e IA aplicada ao desenvolvimento." />
+  <meta property="og:title" content="Bernardo P.D. | Desenvolvedor Full Stack" />
+  <meta property="og:description" content="Desenvolvedor Full Stack | Java | Spring Boot | Angular. Modernizando sistemas legados na Bradesco Seguros." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://bernardopdutra.com.br/" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Bernardo Dutra | Desenvolvedor Back-End" />
-  <meta name="twitter:description" content="Desenvolvedor Back-End | Python, Java, SQL e com forte interesse em automação de processos." />
-  <title>Bernardo Dutra | Desenvolvedor Back-End</title>
+  <meta property="og:image" content="https://bernardopdutra.com.br/assets/foto-hero.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Bernardo P.D. | Desenvolvedor Full Stack</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,400;0,500;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@300;400;500;700;800&family=Fragment+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
-  <!-- Anti-flash: aplica tema antes da renderização -->
-  <script>
-    (function() {
-      var saved = localStorage.getItem('bd-theme');
-      document.documentElement.setAttribute('data-theme', saved || 'dark');
-    })();
-  </script>
 </head>
 <body>
 
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.4" d="M3 12h17m-7-7l7 7-7 7"/></symbol>
+    <symbol id="i-star" viewBox="0 0 100 100"><g stroke="currentColor" stroke-width="5" stroke-linecap="round"><path d="M50 6v88M6 50h88M19 19l62 62M81 19L19 81"/></g></symbol>
+  </svg>
+
   <!-- NAVBAR -->
-  <header class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="nav-logo">&lt;BD /&gt;</a>
-      <nav class="nav-links" id="navLinks">
-        <a href="#sobre">Sobre</a>
-        <a href="#habilidades">Skills</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#experiencia">Experiência</a>
-        <a href="#certificacoes">Certificações</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <div class="nav-actions">
-        <!-- Botão toggle dark/light mode -->
-        <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">
-          <!-- Ícone Sol (aparece no dark mode) -->
-          <svg class="icon-sun" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m8.66-9h-1M4.34 12h-1m15.07-6.07-.71.71M6.34 17.66l-.71.71m12.73 0-.71-.71M6.34 6.34l-.71-.71M12 5a7 7 0 100 14A7 7 0 0012 5z"/></svg>
-          <!-- Ícone Lua (aparece no light mode) -->
-          <svg class="icon-moon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-        </button>
-        <a href="#curriculo" class="btn btn-outline btn-sm">Currículo</a>
-        <button class="hamburger" id="hamburger" aria-label="Abrir menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-    </div>
+  <header class="nav" id="nav">
+    <a href="#topo" class="nav-brand">Bernardo D.</a>
+    <span class="nav-loc">Diretamente do Rio de Janeiro, Brasil</span>
+    <nav class="nav-links" id="navLinks" aria-label="Seções">
+      <a href="#topo">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#experiencia">Experiência</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+      <a href="assets/Curriculo_Bernardopd.pdf" target="_blank" rel="noopener">Currículo</a>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">Menu</button>
   </header>
 
-  <!-- HERO -->
-  <section class="hero" id="hero">
-    <div class="hero-bg-grid" style="pointer-events:none;"></div>
-    <div class="hero-glow"></div>
-    <div class="hero-content">
-      <div class="hero-badge reveal">
-        <span class="badge-dot"></span>
-        Disponível para oportunidades
-      </div>
-      <h1 class="hero-name reveal">
-        Olá, sou<br />
-        <span class="gradient-text">Bernardo Dutra</span>
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" id="topo">
+      <figure class="hero-photo">
+        <img src="assets/foto-hero.jpg" alt="Retrato em preto e branco de Bernardo Dutra" width="800" height="940" />
+      </figure>
+      <h1 class="hero-title">
+        <span class="line"><span>Dev</span></span>
+        <span class="line"><span>Full Stack</span></span>
       </h1>
-      <p class="hero-title reveal">
-        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      <p class="hero-sub">
+        Java, Spring Boot e Angular. Hoje modernizando o sistema
+        jurídico da Bradesco Seguros, do legado ao micro-frontend
       </p>
-      <p class="hero-tagline reveal">
-        Construo sistemas do back ao front. O foco está onde importa: <strong>Back-End e automação</strong>. Python, Java e SQL no dia a dia.
-      </p>
-      <div class="hero-buttons reveal">
-        <a href="#projetos" class="btn btn-primary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          Ver Projetos
-        </a>
-        <a href="#contato" class="btn btn-secondary">
-          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-          Contato
-        </a>
-        <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" class="btn btn-icon" aria-label="GitHub">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-        </a>
-        <a href="https://linkedin.com/in/bernardop-d" target="_blank" rel="noopener" class="btn btn-icon" aria-label="LinkedIn">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-      </div>
-      <div class="hero-stats reveal">
-        <div class="stat"><span class="stat-number">7</span><span class="stat-label">Projetos</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-number">1+</span><span class="stat-label">Ano de exp.</span></div>
-        <div class="stat-divider"></div>
-        <div class="stat"><span class="stat-number">15+</span><span class="stat-label">Tecnologias</span></div>
-      </div>
-    </div>
-    <div class="scroll-indicator"><span>scroll</span><div class="scroll-line"></div></div>
-  </section>
+    </section>
 
-  <!-- SOBRE MIM -->
-  <section class="section" id="sobre">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// sobre</span>
-        <h2 class="section-title">Quem sou eu</h2>
-      </div>
+    <!-- SOBRE -->
+    <section class="section about" id="sobre">
       <div class="about-grid">
-        <div class="about-image reveal">
-          <div class="avatar-wrapper">
-            <div class="avatar-placeholder">
-              <img src="assets/foto.jpg" alt="Bernardo Dutra" class="avatar-photo" />
-            </div>
-            <div class="avatar-ring"></div>
-            <div class="avatar-badge-float">⚙️</div>
-          </div>
-        </div>
+        <h2 class="big reveal">Problema real primeiro.<br />Código depois.</h2>
         <div class="about-text reveal">
-          <p class="about-intro">
-            Gosto de resolver problemas com código. Comecei como Jovem Aprendiz na <strong>Empresa de Navegação Elcano SA</strong>, onde aprendi na prática o que é trabalhar com sistemas reais: banco de dados SQL no dia a dia, scripts de automação que reduziram para 30 minutos uma tarefa que tomava horas na frota de 11 navios, testes de QA em aplicativos críticos e suporte remoto às embarcações.
+          <p>
+            Sou Bernardo Pereira Dutra, desenvolvedor full stack no Rio de Janeiro, com cerca de 2 anos na área de tecnologia.
+            Hoje estou na Bradesco Seguros como estagiário de desenvolvimento full stack, modernizando o sistema jurídico:
+            migro módulos legados em Java EJB para Spring Boot no back-end e Angular no front-end.
           </p>
           <p>
-            Depois, surgiu a oportunidade de ajudar minha mãe, que tem uma empresa de aluguel de materiais para festas. Desenvolvi do zero um sistema web pra ela: back-end em Python, banco SQLite, integração com WhatsApp pra confirmar pedidos automaticamente. Resultado: 80% dos processos que ela fazia na mão viraram automáticos, e na alta temporada ela conseguiu atender o dobro de clientes.
+            No dia a dia refatoro legado com POO, Design Patterns e DRY, crio componentes reutilizáveis, levo módulos para
+            micro-frontends, escrevo cenários de teste e queries SQL para relatórios críticos em produção, sempre perto dos Product Owners.
           </p>
           <p>
-            Mais recentemente comecei a explorar agentes de IA. Construí um sistema multi-agente com Google ADK e Gemini 2.5 Flash onde um agente pesquisa na web, outro escreve e executa código, e um agente raiz orquestra tudo. O usuário descreve o problema e o sistema resolve. Também desenvolvi um Job Scraper com FastAPI e Selenium pra automatizar minha própria busca por vagas.
+            Antes, na Empresa de Navegação Elcano, aprendi na prática o que é trabalhar com sistemas reais. Também estudo IA aplicada
+            ao desenvolvimento para entregar com mais qualidade e agilidade. Curso Análise e Desenvolvimento de Sistemas na Estácio,
+            com conclusão em junho de 2027.
           </p>
-          <p>
-            Trabalho principalmente com Java, Spring Boot, Python e FastAPI, com projetos rodando em MySQL, SQLite, CI/CD via GitHub Actions e arquitetura em camadas. Prefiro entender o que está acontecendo por baixo antes de abstrair.
-          </p>
-          <p>
-            Estou cursando <strong>Análise e Desenvolvimento de Sistemas</strong> na Estácio de Sá, com conclusão em Dezembro de 2026, e procurando minha primeira oportunidade CLT como desenvolvedor júnior ou estagiário.
-          </p>
-          <div class="about-highlights">
-            <div class="highlight-item"><span class="highlight-icon">📍</span><span>Rio de Janeiro, Tijuca</span></div>
-            <div class="highlight-item"><span class="highlight-icon">🎓</span><span>ADS, Estácio de Sá (2026)</span></div>
-            <div class="highlight-item"><span class="highlight-icon">🌐</span><span>Inglês Avançado</span></div>
-            <div class="highlight-item"><span class="highlight-icon">🚀</span><span>Aberto a oportunidades!</span></div>
-          </div>
+          <dl class="facts">
+            <div><dt>Stack principal</dt><dd>Java, Spring Boot, Angular</dd></div>
+            <div><dt>Arquitetura</dt><dd>POO, Design Patterns, DRY, micro-frontends</dd></div>
+            <div><dt>Dados</dt><dd>PostgreSQL, MySQL, Dbeaver</dd></div>
+            <div><dt>Também uso</dt><dd>Python, JIRA, Scrapy, Git, cloud (inicial)</dd></div>
+            <div><dt>IA aplicada</dt><dd>Assistentes de código, engenharia de prompt, agentes</dd></div>
+            <div><dt>Idiomas</dt><dd>Português nativo, inglês avançado, espanhol básico</dd></div>
+          </dl>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- HABILIDADES -->
-  <section class="section section-alt" id="habilidades">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// skills</span>
-        <h2 class="section-title">Habilidades técnicas</h2>
-      </div>
-      <div class="skills-grid">
-
-        <!-- Linha 1 -->
-        <div class="skill-category reveal">
-          <h3 class="skill-category-title"><span class="category-icon">{ }</span> Linguagens</h3>
-          <div class="skill-items">
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
-            <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
-            <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>SQL</span></div>
-            <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
-            <div class="skill-item"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
-            <div class="skill-item"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-category-title"><span class="category-icon">◈</span> Frameworks & APIs</h3>
-          <div class="skill-items">
-            <div class="skill-item"><i class="devicon-spring-plain colored"></i><span>Spring Boot 3</span></div>
-            <div class="skill-item"><i class="devicon-spring-plain colored"></i><span>Spring Data JPA</span></div>
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Bean Validation</span></div>
-            <div class="skill-item"><i class="devicon-fastapi-plain colored"></i><span>FastAPI</span></div>
-            <div class="skill-item"><i class="devicon-flask-original"></i><span>Flask</span></div>
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>JDBC</span></div>
-            <div class="skill-item"><i class="devicon-selenium-original colored"></i><span>Selenium</span></div>
-            <div class="skill-item"><i class="devicon-pandas-original colored"></i><span>Pandas</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-category-title"><span class="category-icon">◻</span> Arquitetura</h3>
-          <div class="skill-items">
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>API RESTful</span></div>
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>POO</span></div>
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>MVC</span></div>
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>SOLID</span></div>
-            <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Clean Code</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-category-title"><span class="category-icon">🧠</span> Agentes de IA</h3>
-          <div class="skill-items">
-            <div class="skill-item"><i class="devicon-google-plain colored"></i><span>Google ADK</span></div>
-            <div class="skill-item"><i class="devicon-google-plain colored"></i><span>Gemini 2.5 Flash</span></div>
-            <div class="skill-item"><i class="devicon-google-plain colored"></i><span>Multi-Agente</span></div>
-            <div class="skill-item"><i class="devicon-google-plain colored"></i><span>Prompt Engineering</span></div>
-          </div>
-        </div>
-
-        <!-- Linha 2 -->
-        <div class="skill-category reveal">
-          <h3 class="skill-category-title"><span class="category-icon">⚙</span> Banco de Dados</h3>
-          <div class="skill-items">
-            <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
-            <div class="skill-item"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
-            <div class="skill-item"><i class="devicon-sqlite-plain colored"></i><span>SQLite</span></div>
-            <div class="skill-item"><i class="devicon-h2database-plain colored"></i><span>H2</span></div>
-            <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>Modelagem Relacional</span></div>
-            <div class="skill-item"><i class="devicon-dbeaver-plain colored"></i><span>DBeaver</span></div>
-          </div>
-        </div>
-
-        <div class="skill-category reveal">
-          <h3 class="skill-category-title"><span class="category-icon">⌘</span> Ferramentas & DevOps</h3>
-          <div class="skill-items">
-            <div class="skill-item"><i class="devicon-git-plain colored"></i><span>Git</span></div>
-            <div class="skill-item"><i class="devicon-github-original"></i><span>GitHub</span></div>
-            <div class="skill-item"><i class="devicon-githubactions-plain colored"></i><span>GitHub Actions</span></div>
-            <div class="skill-item"><i class="devicon-maven-plain colored"></i><span>Maven</span></div>
-            <div class="skill-item"><i class="devicon-postman-plain colored"></i><span>Postman</span></div>
-            <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
-            <div class="skill-item"><i class="devicon-vscode-plain colored"></i><span>VS Code</span></div>
-            <div class="skill-item"><i class="devicon-jira-plain colored"></i><span>Scrum / Kanban</span></div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJETOS -->
-  <section class="section" id="projetos">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// projetos</span>
-        <h2 class="section-title">Trabalhos & Projetos</h2>
-        <p class="section-subtitle">Projetos reais. Alguns pessoais, um freelance. Todos com código no GitHub.</p>
+    <!-- EXPERIÊNCIA -->
+    <section class="section" id="experiencia">
+      <div class="head">
+        <h2 class="big reveal">Experiência</h2>
+        <p class="head-note reveal">Sistemas reais.<br />Resultados medidos.</p>
       </div>
 
-      <div class="project-filters reveal">
-        <button class="filter-btn active" data-filter="all">Todos</button>
-        <button class="filter-btn" data-filter="backend">Back-End</button>
-        <button class="filter-btn" data-filter="fullstack">Full Stack</button>
-        <button class="filter-btn" data-filter="automacao">Automação</button>
-        <button class="filter-btn" data-filter="ia">IA</button>
+      <div class="rows">
+        <details class="exp reveal" open>
+          <summary class="row">
+            <span class="row-label">Jun 2026 – atual · Desenvolvedor full stack, estágio</span>
+            <span class="row-title">Bradesco Seguros</span>
+            <span class="row-plus" aria-hidden="true"></span>
+          </summary>
+          <ul class="exp-body">
+            <li>Modernização do sistema jurídico: migração de módulos legados em Java EJB para Spring Boot e Angular, com foco em manutenibilidade e integridade dos dados.</li>
+            <li>Refatoração de legado com POO, Design Patterns e DRY, usando classes abstratas e componentes reutilizáveis que reduzem duplicação.</li>
+            <li>Desacoplamento de módulos da aplicação principal em micro-frontends, para cada módulo evoluir de forma independente.</li>
+            <li>Funcionalidades e correções em Spring Boot e Angular, mantendo os dados consistentes entre o legado e o novo sistema.</li>
+            <li>Validação de requisitos direto com os Product Owners da área jurídica e cenários de teste junto com QAs e devs.</li>
+            <li>Queries SQL complexas para relatórios críticos, seguindo o fluxo de aprovação que protege a segurança e a performance do banco.</li>
+          </ul>
+        </details>
+        <details class="exp reveal">
+          <summary class="row">
+            <span class="row-label">Set 2024 – Mar 2026 · Auxiliar técnico, jovem aprendiz</span>
+            <span class="row-title">Navegação Elcano</span>
+            <span class="row-plus" aria-hidden="true"></span>
+          </summary>
+          <ul class="exp-body">
+            <li>Suporte técnico e operacional de uma frota de 11 navios.</li>
+            <li>Scripts Batch que reduziram o processamento manual de arquivos da frota de horas para 30 minutos, eliminando falhas recorrentes.</li>
+            <li>Queries SQL diárias para análise, correção de inconsistências e integridade dos dados operacionais.</li>
+            <li>Testes funcionais em 3 aplicativos internos críticos, reportando falhas antes de irem para produção.</li>
+            <li>Suporte remoto às embarcações via RDC Manager e apoio aos planos de manutenção da frota no AMOS.</li>
+          </ul>
+        </details>
+        <details class="exp reveal">
+          <summary class="row">
+            <span class="row-label">Set 2025 – Nov 2025 · Desenvolvedor back-end, freela</span>
+            <span class="row-title">Hércules Festas</span>
+            <span class="row-plus" aria-hidden="true"></span>
+          </summary>
+          <ul class="exp-body">
+            <li>Sistema web do zero para uma locadora de artigos para festas que anotava pedidos em papel.</li>
+            <li>Back-end em Python (HTTP da Standard Library), banco modelado do zero e integração com WhatsApp para confirmar pedidos.</li>
+            <li>80% do trabalho manual eliminado e o dobro de atendimentos na alta temporada.</li>
+          </ul>
+        </details>
       </div>
 
-      <div class="projects-grid">
-
-        <!-- PROJETO 1: Bot de Automação de Vagas -->
-        <div class="project-card reveal" data-category="automacao">
-          <div class="project-header">
-            <div class="project-icon">🤖</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">Bot de Automação de Vagas</h3>
-          <p class="project-description">
-            Raspa dados de vagas do LinkedIn via Selenium com simulação de comportamento humano. Filtra por regime de trabalho, faz scroll infinito e exporta tudo em CSV validado pelo Pydantic. A API é servida pelo FastAPI.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>FastAPI</span><span>Selenium</span><span>Pydantic</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-        <!-- PROJETO 2: Sistema de Gestão de Loja -->
-        <div class="project-card reveal" data-category="backend">
-          <div class="project-header">
-            <div class="project-icon">🏪</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">Sistema de Gestão de Loja</h3>
-          <p class="project-description">
-            Aplicação desktop em Java para controle de estoque e vendas. Arquitetura MVC, CRUD completo e conexão ao MySQL via JDBC. Projeto focado em separação de responsabilidades e persistência relacional.
-          </p>
-          <div class="project-tech">
-            <span>Java</span><span>MySQL</span><span>JDBC</span><span>MVC</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-        <!-- PROJETO 3: Sistema de E-commerce -->
-        <div class="project-card reveal" data-category="backend">
-          <div class="project-header">
-            <div class="project-icon">🛒</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">Sistema de E-commerce</h3>
-          <p class="project-description">
-            Plataforma de vendas em Python com SQLite. Implementa carrinho de compras, cadastro de produtos e persistência estruturada. Projeto construído sem frameworks para entender a lógica de negócio na essência.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>SQLite</span><span>CRUD</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-        <!-- PROJETO 4: Freelancer, Hércules Festas -->
-        <div class="project-card reveal" data-category="fullstack">
-          <div class="project-header">
-            <div class="project-icon">🎉</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">
-            Hércules Festas
-            <span style="font-size:0.7rem;color:var(--accent);margin-left:8px;font-family:var(--font-mono);">freelance</span>
-          </h3>
-          <p class="project-description">
-            Sistema de gestão de eventos entregue como freelance. Back-end em Python puro, sem frameworks. Front integrado com HTML5, CSS3 e JS. Banco SQLite com modelagem relacional e queries pensadas para escalar.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>SQLite</span><span>HTML5</span><span>CSS3</span><span>JS</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-
-        <!-- PROJETO 5: Professora de Programação -->
-        <div class="project-card reveal" data-category="backend">
-          <div class="project-header">
-            <div class="project-icon">🤖</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d/codigo-chatbot" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-              <a href="https://github.com/bernardop-d/codigo-chatbot" target="_blank" rel="noopener" aria-label="Abrir projeto">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">Professora de Programação</h3>
-          <p class="project-description">
-            Chatbot via terminal para ensino de Java e Python. Responde perguntas, explica conceitos com exemplos de código e sugere exercícios progressivos. Interface 100% no console: sem dependências externas, sem framework.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>Chatbot</span><span>Terminal</span><span>Java</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d/codigo-chatbot" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-        <!-- PROJETO 6: Blog Tech IA -->
-        <div class="project-card reveal" data-category="ia">
-          <div class="project-header">
-            <div class="project-icon">📝</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d/blog-tech-IA" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">Blog Tech IA</h3>
-          <p class="project-description">
-            Blog técnico com publicação autônoma via GitHub Actions. Um script Python gera os posts automaticamente e o CI/CD publica sem intervenção manual. Jekyll como gerador estático.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>Jekyll</span><span>GitHub Actions</span><span>CI/CD</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d/blog-tech-IA" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-        <!-- PROJETO 7: Agente Executor de Código -->
-        <div class="project-card reveal" data-category="ia">
-          <div class="project-header">
-            <div class="project-icon">🧠</div>
-            <div class="project-links-top">
-              <a href="https://github.com/bernardop-d/agent-executor-codigo" target="_blank" rel="noopener" aria-label="Ver código">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-              </a>
-            </div>
-          </div>
-          <h3 class="project-name">Agente Executor de Código</h3>
-          <p class="project-description">
-            Sistema multi-agente para resolução autônoma de problemas. Um agente pesquisa na web, outro escreve e executa código, e um agente raiz orquestra tudo. O usuário descreve o problema e o sistema resolve.
-          </p>
-          <div class="project-tech">
-            <span>Python</span><span>Google ADK</span><span>Gemini 2.5 Flash</span><span>Multi-Agente</span>
-          </div>
-          <div class="project-buttons">
-            <a href="https://github.com/bernardop-d/agent-executor-codigo" target="_blank" rel="noopener" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-
-        <!-- DUPLIQUE ESTE BLOCO PARA NOVOS PROJETOS
-        <div class="project-card reveal" data-category="backend">
-          <div class="project-header">
-            <div class="project-icon">🔥</div>
-            <div class="project-links-top">
-              <a href="URL_GITHUB" target="_blank" rel="noopener">...</a>
-            </div>
-          </div>
-          <h3 class="project-name">Novo Projeto</h3>
-          <p class="project-description">Descrição aqui.</p>
-          <div class="project-tech"><span>Tech1</span><span>Tech2</span></div>
-          <div class="project-buttons">
-            <a href="URL_GITHUB" class="btn btn-outline btn-sm">Ver Código</a>
-          </div>
-        </div>
-        -->
-
+      <div class="edu reveal">
+        <p class="edu-label">Formação e certificados</p>
+        <ul>
+          <li><strong>Análise e Desenvolvimento de Sistemas</strong> · Estácio · jul 2024 – jun 2027</li>
+          <li><a href="https://www.dio.me/certificate/O3TLGN8W/share" target="_blank" rel="noopener">CI&amp;T · Do Prompt ao Agente ↗</a></li>
+          <li>Formação GitHub Certification</li>
+          <li>Proteção de software e segurança da IA</li>
+          <li><a href="https://www.netacad.com/certificates?issuanceId=284c087f-6dd0-4ea5-9035-5627525b3f57" target="_blank" rel="noopener">Introduction to Cybersecurity · Cisco ↗</a></li>
+          <li>Excelera · Excel e Análise de Dados</li>
+          <li><a href="https://www.coursera.org/account/accomplishments/verify/BB1X168EYPRG" target="_blank" rel="noopener">Princípios de Desenvolvimento Ágil de Software · ITA ↗</a></li>
+          <li><a href="https://www.dio.me/certificate/ZGPFVCL9/share" target="_blank" rel="noopener">Engenharia de Dados e ML · TOTVS + DIO · 61h ↗</a></li>
+          <li><a href="https://www.cursoemvideo.com/validacao-de-certificado/?codigo=14309F-6573-7" target="_blank" rel="noopener">Banco de Dados MySQL · Curso em Vídeo ↗</a></li>
+          <li>Fundamentos de Java e POO · Curso em Vídeo · 40h</li>
+          <li>Python do Básico ao Avançado · Udemy</li>
+        </ul>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIÊNCIA -->
-  <section class="section section-alt" id="experiencia">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// experiência</span>
-        <h2 class="section-title">Trajetória profissional</h2>
+    <!-- PROJETOS -->
+    <section class="section" id="projetos">
+      <div class="head">
+        <h2 class="big reveal">Projetos em<br />destaque</h2>
+        <p class="head-note reveal">Automação dá velocidade.<br />Arquitetura dá futuro.</p>
       </div>
-      <div class="timeline">
 
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>Empresa de Navegação Elcano SA</h3>
-              <span class="timeline-badge">Auxiliar Técnico · Jovem Aprendiz</span>
-            </div>
-            <span class="timeline-period">📅 Setembro de 2024 — Março de 2026</span>
-            <p>
-              <strong>Automação com Batch:</strong> Criei scripts Batch que processavam entre 300 e 700 arquivos por navio. O processo que tomava 15–20 min por embarcação passou a cobrir a frota inteira de 11 navios em 30 minutos.<br /><br />
-              <strong>Gestão de Dados e SQL:</strong> Executava queries de análise e correção de inconsistências diretamente no banco de dados da frota, cruzando dados entre o banco central e os bancos individuais de cada navio para garantir consistência das informações operacionais.<br /><br />
-              <strong>Garantia de Qualidade (QA):</strong> Testei 3 aplicativos usados pela tripulação e pelo escritório, identificando bugs de duplicidade, travamentos e falhas na ordem de execução. Documentei e reportei os problemas com casos de teste e passos de reprodução.<br /><br />
-              <strong>Suporte Remoto:</strong> Acessava as máquinas via RDC Manager para atualizações técnicas e acompanhamento de ações preditivas nos componentes da frota.
-            </p>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content">
-            <div class="timeline-header">
-              <h3>Hércules Festas</h3>
-              <span class="timeline-badge">Desenvolvedor Back-End · Freelance</span>
-            </div>
-            <span class="timeline-period">📅 Setembro de 2025 — Novembro de 2025</span>
-            <p>
-              Desenvolvi do zero um sistema web para digitalizar a operação de uma empresa de locação de artigos para festas, que operava de forma analógica, com anotações de pedidos feitas manualmente em papel, resultando em erros constantes e falta de controle de estoque.<br /><br />
-              <strong>Stack Tecnológica:</strong> Back-end em Python (servidor HTTP Standard Library); banco de dados relacional com SQLite; integração com a API do WhatsApp para automação de notificações e confirmação de pedidos após o atendimento.<br /><br />
-              <strong>Arquitetura de Dados:</strong> Modelei o banco de dados relacional em SQLite e integrei o sistema ao WhatsApp para envio automático de mensagens após cada atendimento.<br /><br />
-              <strong>Resultado:</strong> A transição do papel para o sistema digital eliminou 80% do trabalho manual e permitiu dobrar o volume de atendimentos na alta temporada através da centralização dos dados e automação de processos.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- CERTIFICAÇÕES -->
-  <section class="section" id="certificacoes">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// certificações</span>
-        <h2 class="section-title">Certificações</h2>
-      </div>
-      <div class="certs-grid">
-
-        <!-- ── BACK-END ─────────────────────────────────────────── -->
-
-        <!-- Formação: sem link público -->
-        <div class="cert-card reveal no-link">
-          <div class="cert-icon">🎓</div>
-          <div class="cert-info">
-            <h3>Análise e Desenvolvimento de Sistemas</h3>
-            <span class="cert-issuer">Universidade Estácio de Sá</span>
-            <span class="cert-date">Conclusão: Dezembro de 2026</span>
-          </div>
-        </div>
-
-        <!-- Java e POO: adicione o link do certificado quando disponível -->
-        <div class="cert-card reveal no-link">
-          <div class="cert-icon">☕</div>
-          <div class="cert-info">
-            <h3>Fundamentos de Java e POO</h3>
-            <span class="cert-issuer">Curso em Vídeo — 40h</span>
-            <span class="cert-project">→ usado em: Sistema de Gestão de Loja</span>
-          </div>
-        </div>
-
-        <!-- Python: adicione o link do certificado Udemy quando disponível -->
-        <div class="cert-card reveal no-link">
-          <div class="cert-icon">🐍</div>
-          <div class="cert-info">
-            <h3>Python: do Básico ao Avançado</h3>
-            <span class="cert-issuer">Udemy</span>
-            <span class="cert-project">→ usado em: Hércules Festas · Bot de Vagas</span>
-          </div>
-        </div>
-
-        <!-- ── IA & AGENTES ──────────────────────────────────────── -->
-
-        <!-- CI&T: link real -->
-        <a href="https://www.dio.me/certificate/O3TLGN8W/share" target="_blank" rel="noopener" class="cert-card reveal">
-          <div class="cert-icon">🤖</div>
-          <div class="cert-info">
-            <h3>Do Prompt ao Agente</h3>
-            <span class="cert-issuer">CI&T — 35h</span>
-            <span class="cert-project">→ usado em: Agente Executor de Código</span>
-            <span class="cert-date">Ver certificado ↗</span>
-          </div>
-          <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-        </a>
-
-        <!-- ── DADOS ─────────────────────────────────────────────── -->
-
-        <!-- TOTVS+DIO: link real -->
-        <a href="https://www.dio.me/certificate/ZGPFVCL9/share" target="_blank" rel="noopener" class="cert-card reveal">
-          <div class="cert-icon">📈</div>
-          <div class="cert-info">
-            <h3>Engenharia de Dados e ML</h3>
-            <span class="cert-issuer">TOTVS + DIO — 61h</span>
-            <span class="cert-project">→ usado em: Bot de Automação de Vagas</span>
-            <span class="cert-date">Ver certificado ↗</span>
-          </div>
-          <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-        </a>
-
-        <!-- MySQL: link real confirmado -->
-        <a href="https://www.cursoemvideo.com/validacao-de-certificado/?codigo=14309F-6573-7" target="_blank" rel="noopener" class="cert-card reveal">
-          <div class="cert-icon">🗄️</div>
-          <div class="cert-info">
-            <h3>Banco de Dados MySQL</h3>
-            <span class="cert-issuer">Curso em Vídeo</span>
-            <span class="cert-date">Ver certificado ↗</span>
-          </div>
-          <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-        </a>
-
-        <!-- ── COMPLEMENTARES ────────────────────────────────────── -->
-
-        <!-- ITA / Coursera: link real confirmado -->
-        <a href="https://www.coursera.org/account/accomplishments/verify/BB1X168EYPRG" target="_blank" rel="noopener" class="cert-card reveal">
-          <div class="cert-icon">⚡</div>
-          <div class="cert-info">
-            <h3>Princípios de Desenvolvimento Ágil</h3>
-            <span class="cert-issuer">ITA — via Coursera</span>
-            <span class="cert-date">Ver certificado ↗</span>
-          </div>
-          <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-        </a>
-
-        <!-- Excel: adicione o link quando disponível -->
-        <div class="cert-card reveal no-link">
-          <div class="cert-icon">📊</div>
-          <div class="cert-info">
-            <h3>Excel e Análise de Dados</h3>
-            <span class="cert-issuer">Excelera</span>
-          </div>
-        </div>
-
-        <!-- Cisco: link real confirmado -->
-        <a href="https://www.netacad.com/certificates?issuanceId=284c087f-6dd0-4ea5-9035-5627525b3f57" target="_blank" rel="noopener" class="cert-card reveal">
-          <div class="cert-icon">🔐</div>
-          <div class="cert-info">
-            <h3>Introduction to Cybersecurity</h3>
-            <span class="cert-issuer">Cisco Networking Academy</span>
-            <span class="cert-date">Ver certificado ↗</span>
-          </div>
-          <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-        </a>
-
-      </div>
-    </div>
-  </section>
-
-    <!-- CURRÍCULO -->
-  <section class="section section-alt" id="curriculo">
-    <div class="container">
-      <div class="resume-block reveal">
-        <div class="resume-text">
-          <h2>Meu Currículo</h2>
-          <p>Quer ver minha experiência completa? Baixe ou visualize a versão atualizada do meu currículo.</p>
-        </div>
-        <div class="resume-buttons">
-          <!-- Coloque o PDF em assets/ e atualize o href abaixo -->
-          <a href="assets/Curriculo_Bernardopd.pdf" target="_blank" rel="noopener" class="btn btn-primary">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
-            Visualizar
+      <ul class="rows" id="projectRows">
+        <li class="reveal">
+          <a class="row" href="https://github.com/bernardop-d/agent-executor-codigo" target="_blank" rel="noopener"
+             data-desc="Um agente pesquisa na web, outro escreve e executa código, e um agente raiz orquestra tudo.">
+            <span class="row-label">Python + Google ADK + Gemini 2.5 Flash</span>
+            <span class="row-title">Agente executor</span>
+            <svg class="row-arrow" width="34" height="34"><use href="#i-arrow"/></svg>
           </a>
-          <a href="assets/Curriculo_Bernardopd.pdf" download class="btn btn-outline">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-            Baixar PDF
+        </li>
+        <li class="reveal">
+          <a class="row" href="https://github.com/bernardop-d/linkedin-job-scraper" target="_blank" rel="noopener"
+             data-desc="API REST que varre o LinkedIn, filtra vagas por regime de trabalho e exporta CSV validado com Pydantic.">
+            <span class="row-label">Python + FastAPI + Selenium</span>
+            <span class="row-title">Bot de vagas</span>
+            <svg class="row-arrow" width="34" height="34"><use href="#i-arrow"/></svg>
           </a>
+        </li>
+        <li class="reveal">
+          <a class="row" href="https://github.com/bernardop-d/gestao-loja-java-mysql" target="_blank" rel="noopener"
+             data-desc="Estoque e vendas em camadas, com Bean Validation, transações e BigDecimal para valores.">
+            <span class="row-label">Java + Spring Boot 3 + MySQL</span>
+            <span class="row-title">Gestão de loja</span>
+            <svg class="row-arrow" width="34" height="34"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="row" href="https://github.com/bernardop-d/Hercules-festas.v3" target="_blank" rel="noopener"
+             data-desc="Pedidos, estoque e confirmação automática por WhatsApp para uma locadora de festas. Freela entregue do zero.">
+            <span class="row-label">Python + SQLite + WhatsApp API · freela</span>
+            <span class="row-title">Hércules Festas</span>
+            <svg class="row-arrow" width="34" height="34"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="row" href="https://github.com/bernardop-d/blog-tech-IA-main" target="_blank" rel="noopener"
+             data-desc="Blog que se publica sozinho: um script Python gera os posts e o CI/CD coloca no ar.">
+            <span class="row-label">Python + Jekyll + GitHub Actions</span>
+            <span class="row-title">Blog Tech IA</span>
+            <svg class="row-arrow" width="34" height="34"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+        <li class="reveal">
+          <a class="row" href="https://github.com/bernardop-d/codigo-chatbot" target="_blank" rel="noopener"
+             data-desc="Assistente de terminal que analisa código Java e Python, aponta erros e explica conceitos.">
+            <span class="row-label">Java + POO + Terminal</span>
+            <span class="row-title">Professora Anna</span>
+            <svg class="row-arrow" width="34" height="34"><use href="#i-arrow"/></svg>
+          </a>
+        </li>
+      </ul>
+      <div class="preview" id="preview" aria-hidden="true"><p></p></div>
+    </section>
+
+    <!-- FAIXA DE TEXTO -->
+    <section class="band" aria-label="Bernardo. Full stack. Spring Boot. Angular. Java. Do legado ao moderno. SQL. IA aplicada.">
+      <div class="band-row" aria-hidden="true">
+        <div class="band-track">
+          <span>Bernardo.</span><svg><use href="#i-star"/></svg>
+          <span>Full stack.</span><svg><use href="#i-star"/></svg>
+          <span>Spring Boot.</span><svg><use href="#i-star"/></svg>
+          <span>Angular.</span><svg><use href="#i-star"/></svg>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CONTATO -->
-  <section class="section" id="contato">
-    <div class="container">
-      <div class="section-header reveal">
-        <span class="section-tag">// contato</span>
-        <h2 class="section-title">Vamos conversar?</h2>
-        <p class="section-subtitle">Aberto a oportunidades, freelas e parcerias. Me chame!</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-links reveal">
-          <a href="/cdn-cgi/l/email-protection#dfbcb0b1abbeabb0f1bdbaadb1beadbbb0afbb9fb8b2beb6b3f1bcb0b2" class="contact-card">
-            <div class="contact-card-icon">✉️</div>
-            <div><strong>Email</strong><span><span class="__cf_email__" data-cfemail="ec8f8382988d9883c28e899e828d9e88839c88ac8b818d8580c28f8381">[email&#160;protected]</span></span></div>
-          </a>
-          <a href="tel:+5521976758520" class="contact-card">
-            <div class="contact-card-icon">📱</div>
-            <div><strong>Celular</strong><span>(21) 97675-8520</span></div>
-          </a>
-          <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" class="contact-card">
-            <div class="contact-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-            </div>
-            <div><strong>GitHub</strong><span>github.com/bernardop-d</span></div>
-          </a>
-          <a href="https://linkedin.com/in/bernardop-d" target="_blank" rel="noopener" class="contact-card">
-            <div class="contact-card-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#0077B5" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </div>
-            <div><strong>LinkedIn</strong><span>linkedin.com/in/bernardop-d</span></div>
-          </a>
+      <div class="band-row reverse" aria-hidden="true">
+        <div class="band-track">
+          <span>Java.</span><svg><use href="#i-star"/></svg>
+          <span>Legado → moderno.</span><svg><use href="#i-star"/></svg>
+          <span>SQL.</span><svg><use href="#i-star"/></svg>
+          <span>IA aplicada.</span><svg><use href="#i-star"/></svg>
         </div>
-
-        <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/meervkzz" method="POST">
-          <input type="hidden" name="_replyto" id="email" />
-          <input type="hidden" name="_subject" value="Nova mensagem do portfólio!" />
-          <div class="form-group">
-            <label for="name">Nome</label>
-            <input type="text" id="name" name="name" placeholder="Seu nome" required />
-          </div>
-          <div class="form-group">
-            <label for="email_visible">Email</label>
-            <input type="email" id="email_visible" name="email" placeholder="seu@email.com" required />
-          </div>
-          <div class="form-group">
-            <label for="message">Mensagem</label>
-            <textarea id="message" name="message" placeholder="Olá, Bernardo! Gostaria de conversar sobre..." rows="5" required></textarea>
-          </div>
-          <button type="submit" class="btn btn-primary btn-full">
-            Enviar mensagem
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-          </button>
-          <div class="form-feedback" id="formFeedback"></div>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FOOTER -->
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <p class="contact-kicker reveal">Quer trocar ideia sobre um projeto ou oportunidade? Pode me chamar.</p>
+      <a class="contact-mail reveal" href="mailto:contato.bernardopd@gmail.com">contato.bernardopd<wbr />@gmail.com</a>
+      <p class="contact-alt reveal">
+        <a href="https://wa.me/5521976758520" target="_blank" rel="noopener">WhatsApp (21) 97675-8520</a>
+      </p>
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="#hero" class="nav-logo">&lt;BD /&gt;</a>
-          <p>Desenvolvedor Back-End.</p>
-          <div class="footer-social">
-            <a href="https://github.com/bernardop-d" target="_blank" rel="noopener" aria-label="GitHub">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
-            </a>
-            <a href="https://linkedin.com/in/bernardop-d" target="_blank" rel="noopener" aria-label="LinkedIn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="/cdn-cgi/l/email-protection#10737f7e6471647f3e7275627e7162747f607450777d71797c3e737f7d" aria-label="Email">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-            </a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#habilidades">Skills</a></li>
-            <li><a href="#projetos">Projetos</a></li>
-            <li><a href="#experiencia">Experiência</a></li>
-            <li><a href="#certificacoes">Certificações</a></li>
-            <li><a href="#contato">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Projetos</h4>
-          <ul>
-            <li><a href="#projetos">Bot de Vagas</a></li>
-            <li><a href="#projetos">Gestão de Loja</a></li>
-            <li><a href="#projetos">E-commerce</a></li>
-            <li><a href="#projetos">Hércules Festas</a></li>
-            <li><a href="#projetos">Professora de Programação</a></li>
-            <li><a href="#projetos">Blog Tech IA</a></li>
-            <li><a href="#projetos">Agente Executor de Código</a></li>
-          </ul>
-        </div>
+    <div class="footer-top">
+      <div>
+        <p>Bernardo P.D.</p>
+        <p>© <span id="year">2026</span></p>
       </div>
-      <div class="footer-bottom">
-        <p>© <span id="currentYear"></span> Bernardo Pereira Dutra.</p>
-        <p class="footer-credit">Rio de Janeiro - RJ 📍</p>
-      </div>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/bernardop-d" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/bernardop-d" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="assets/Curriculo_Bernardopd.pdf" target="_blank" rel="noopener">Currículo</a></li>
+      </ul>
+      <ul class="footer-nav">
+        <li><a href="#topo">Início</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
     </div>
+    <p class="footer-word" aria-hidden="true">Bernardo D.</p>
   </footer>
-
-  <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
-  </button>
 
   <script src="js/script.js"></script>
 </body>
