@@ -243,7 +243,7 @@ ul { list-style: none; }
    RESPONSIVO
    ============================================================ */
 @media (max-width: 860px) {
-  .nav { grid-template-columns: auto 1fr auto; mix-blend-mode: normal; background: linear-gradient(#000 40%, transparent); padding-bottom: 26px; }
+  .nav { grid-template-columns: auto 1fr auto; mix-blend-mode: normal; background: #000; padding-bottom: 18px; border-bottom: 1px solid rgba(255,255,255,.08); }
   .nav-loc { display: none; }
   .nav-toggle { display: block; justify-self: end; grid-column: 3; }
   .nav-links {
